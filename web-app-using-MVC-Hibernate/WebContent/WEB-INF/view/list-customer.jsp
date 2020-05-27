@@ -25,8 +25,16 @@
 			<!-- Add new Button ... Add Customer -->
 			<input type="button" value="Add Customer"
 				onclick="window.location.href='showFormForAdd'; return false;"
-				class="add-button">
+				class="add-button"> <br>
 
+
+			<form action="seaerchCustomer" >
+				<!-- Add new Button ... Search Customer -->
+				
+				<input type="submit" value="Search Customer">
+				<input type="text" name="search">
+
+			<form>
 
 
 			<!-- Add the html table here -->
@@ -59,7 +67,7 @@
 							<td>${tempCustomer.lastName }</td>
 							<td>${tempCustomer.email }</td>
 							<td><a href="${updateLink}">Update</a> | <a
-								href="deleteLink"
+								href="${deleteLink}"
 								onclick="if(!(confirm('Are you sure you want to delete this customer ?'))) return false">Delete</a></td>
 						</tr>
 					</c:forEach>
